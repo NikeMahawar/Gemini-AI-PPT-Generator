@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href={{ url_for('static', filename='CSS/styling.css') }} />
+    <style>
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px black;
+          border-radius: 7px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #6A0DAD;
+          border-radius: 7px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #45bde1;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <img src= {{ url_for('static', filename='images/logo.png') }} alt="">
+        <a href="main.html" style="text-decoration: none;"><h4>Home</h4></a>
+        <a href="#page2" style="text-decoration: none;"><h4>ABOUT US</h4></a>
+        <a href="#page3" style="text-decoration: none;"><h4>Gem's Quote</h4></a>
+    </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <video autoplay loop muted src= {{ url_for('static', filename='images/video.mp4') }}> </video>
+    <div id="main">
+        <div id="page1">
+            <h1>CREATE. DESIGN. PRESENT</h1>
+            <h2>Welcome to doom's AI your own AI PPT Generator</h2>
+            <!-- <p>Effortlessly create stunning presentations powered by AI. Let Gemini AI assist you in building professional, captivating slides in minutes.</p><br><br> -->
+            <br><br><a href="{{ url_for('generate') }}"><button class="button-36" role="button">Generate your PPT</button></a>
+            <a href="#about-us"><div id="arrow">
+                <i class="ri-arrow-down-line"></i>
+            </div></a>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+                <div id="scroller-in">
+                    <h4>CREATE &nbsp</h4>
+                    <h4>DESIGN &nbsp</h4>
+                    <h4>PRESENT &nbsp</h4>
+                    <h4>INSPIRE &nbsp</h4>
+                </div>
+                <div id="scroller-in">
+                    <h4>CREATE &nbsp</h4>
+                    <h4>DESIGN &nbsp</h4>
+                    <h4>PRESENT &nbsp</h4>
+                    <h4>INSPIRE &nbsp</h4>
+                </div>
+            </div>
+            <div id="about-us">
+                <img src= {{ url_for('static', filename='images/aboutus.jpg') }} />
+                <div id="about-us-in">
+                    <h3>ABOUT US</h3>
+                    <p>Gemini AI is a cutting-edge tool designed to revolutionize the way you create presentations. With our advanced algorithms and user-friendly interface, you can produce high-quality slides that leave a lasting impression.</p>
+                </div>
+                <img src= {{ url_for('static', filename='images/aboutus4.jpg') }} />
+            </div>
+            <div id="cards-container">
+                <div class="card" id="card1">
+                    <div class="overlay">
+                        <h4>AI-Powered<br>Templates</h4>
+                        <p>Choose from a variety of AI-generated templates tailored to your content and audience. Let Gemini AI do the heavy lifting.</p>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="overlay">
+                        <h4>Design<br> Automation</h4>
+                        <p>Automatically design your slides with the help of AI. Gemini AI ensures consistency and style across your presentation.</p>
+                    </div>
+
+                </div>
+                <div class="card" id="card3">
+                    <div class="overlay">
+                        <h4>Custom<br> Slides</h4>
+                        <p>Create fully customized slides with AI suggestions to enhance your content. Perfect for unique presentations.</p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="green-div">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="">
+                <h4>Transform the way you present with Gemini AI. Intuitive, smart, and incredibly easy to use.</h4>
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/dots-side.svg" alt="">
+            </div>
+        </div>
+        <div id="page3">
+            <p>Gemini AI has changed the game for our presentations. It's like having a personal design assistant that understands our needs.</p>
+            <img id='colon1' src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg" alt="">
+            <img id="colon2" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg" alt="">
+        </div>
+        <div id="footer">
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ url_for('static', filename='JS/main.js') }}"></script>
+</body>
+</html>
